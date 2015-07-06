@@ -104,8 +104,11 @@ namespace ZendeskApi.Contracts.Models
         [IgnoreDataMember]
         public string result_type { get; set; }
 
-        [IgnoreDataMember]
-        public List<long> followup_ids { get; set; }
-// ReSharper restore InconsistentNaming
+        [DataMember(Name = "followup_ids", EmitDefaultValue = false)]
+        public List<long> FollowupIds { get; set; }
+
+        [DataMember(Name = "via_followup_source_id", EmitDefaultValue = false)]
+        public long? ViaFollowupSourceId { get; set; }        
+        // ReSharper restore InconsistentNaming
     }
 }
