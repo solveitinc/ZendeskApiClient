@@ -83,5 +83,8 @@ namespace ZendeskApi.Contracts.Models
 
         [DataMember(Name = "custom_fields")]
         public List<CustomField> CustomFields { get; set; }
+
+        [DataMember(Name = "via_followup_source_id", EmitDefaultValue = false)]
+        public long? ViaFollowupSourceId { get; set; }      
     }
 }
