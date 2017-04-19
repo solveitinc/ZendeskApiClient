@@ -64,7 +64,7 @@ namespace ZendeskApi.Contracts.Models
         public long? OrganisationId { get; set; }
 
         [DataMember(Name = "collaborator_ids", EmitDefaultValue = false)]
-        public List<int> CollaboratorIds { get; set; }
+        public List<long> CollaboratorIds { get; set; }
 
         [DataMember(Name = "group_id", EmitDefaultValue = false)]
         public int? GroupId { get; set; }
